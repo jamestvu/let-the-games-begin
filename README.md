@@ -9,3 +9,6 @@ Installation Instruction
 - Node/NPM
 - Yarn
 
+### Downloading IntelliJ Ultimate
+Visit https://jetbrains.com to purchase the ultimate version of IntelliJ. At this moment, I am not sure if you can use the free community version of IntelliJ. IF you are a student, please visit https://www.jetbrains.com/shop/eform/students to get a free copy of jetbrains application including the IntelliJ Ultimate IDE.
+
