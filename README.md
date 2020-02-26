@@ -10,5 +10,8 @@ Installation Instruction
 - Yarn
 
 ### Downloading IntelliJ Ultimate
-Visit https://jetbrains.com to purchase the ultimate version of IntelliJ. At this moment, I am not sure if you can use the free community version of IntelliJ. IF you are a student, please visit https://www.jetbrains.com/shop/eform/students to get a free copy of jetbrains application including the IntelliJ Ultimate IDE.
+Visit https://jetbrains.com to purchase the IntelliJ Ultimate. At this moment, I am not sure if you can use the free community version of IntelliJ. IF you are a student, please visit https://www.jetbrains.com/shop/eform/students to get yourself free copies of jetbrains application including the IntelliJ Ultimate IDE.
 
+### Downloading and Installing MySQL MAC Instruction
+- Visit https://brew.sh
+copy </usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"> into mac terminal and hit enter. this will install brew.
