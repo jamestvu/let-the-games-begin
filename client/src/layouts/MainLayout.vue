@@ -1,103 +1,51 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
+  <q-layout view="hHh lpR fFf">
+    <q-header elevated class="bg-primary text-white z-max" height-hint="98">
+      <q-tabs align="left" indicator-color="transparent" class="navigation">
+        <q-route-tab to="/" label="Let The Games Begin" />
+        <q-route-tab to="/events" label="Events" />
+        <q-route-tab to="/ranks" label="Ranks" />
+        <q-route-tab to="/pricing" label="Pricing" />
+        <q-route-tab to="/signup" label="Sign Up" />
+      </q-tabs>
+      <span class="login">
+        <q-form @submit="onSubmit">
+          <q-input dark dense standout input-class="text-right" class="input-text-padding" value="" label="USERNAME" />
+          <q-input type="password" dark dense standout input-class="text-right" class="input-text-padding" value="" label="PASSWORD" />
+          <q-btn type="submit" label="Login" class="bg-secondary login-btn" dense />
+        </q-form>
+      </span>
     </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-grey-1"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Essential Links
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
-
 <script>
-import EssentialLink from 'components/EssentialLink';
-
 export default {
   name: 'MainLayout',
-
-  components: {
-    EssentialLink,
-  },
-
-  data() {
-    return {
-      leftDrawerOpen: false,
-      essentialLinks: [
-        {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev',
-        },
-        {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework',
-        },
-        {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev',
-        },
-        {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev',
-        },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev',
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev',
-        },
-      ],
-    };
+  methods: {
+    onSubmit() {
+      console.log('hello');
+    },
   },
 };
 </script>
+<style>
+  .login {
+    display: inline-block;
+    float: right;
+  }
+  .navigation {
+    display: inline-block;
+  }
+  .login-btn {
+    margin: 0 20px 8px 8px;
+    padding: 0 20px 0 20px;
+  }
+  .input-text-padding {
+    display: inline-block;
+    padding: 4px 0 4px 0;
+    margin: 2px 10px 2px 0;
+  }
+</style>
