@@ -1,7 +1,9 @@
-# let-the-games-begin
+# Let The Games Begin
 A better way to create and manage tournament brackets.
 
-Installation Instruction
+# Installation Instruction
+
+####Requirements
 - IntelliJ IDEA Ultimate
 - MySQL
 - Java JDK 13
